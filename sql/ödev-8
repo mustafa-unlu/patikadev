@@ -1,0 +1,38 @@
+--1- test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
+
+CREATE TABLE employee (
+id INTEGER, 
+name VARCHAR(50), 
+birthday DATE, 
+email VARCHAR(100)
+);
+
+--2- Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
+
+insert into employee (id, name, birthday, email) values (1, 'Rosemary Mostyn', '1990-10-24', 'rmostyn0@xinhuanet.com');
+insert into employee (id, name, birthday, email) values (2, 'Lind Meech', '1983-09-01', 'lmeech1@msn.com');
+insert into employee (id, name, birthday, email) values (3, 'Carlye Kellert', '1966-12-11', 'ckellert2@noaa.gov');
+insert into employee (id, name, birthday, email) values (4, 'Brittni Craik', '1984-10-16', 'bcraik3@alexa.com');
+insert into employee (id, name, birthday, email) values (5, 'De witt Shacklady', '1969-11-07', 'dwitt4@privacy.gov.au');
+insert into employee (id, name, birthday, email) values (6, 'Karylin Rignold', '1984-06-02', 'krignold5@geocities.com');
+insert into employee (id, name, birthday, email) values (7, 'Reginauld Bushnell', '1969-10-25', 'rbushnell6@archive.org');
+insert into employee (id, name, birthday, email) values (8, 'Agnesse Points', '1983-12-26', 'apoints7@globo.com');
+insert into employee (id, name, birthday, email) values (9, 'Estrella Curtis', '1973-09-05', 'ecurtis8@bandcamp.com');
+insert into employee (id, name, birthday, email) values (10, 'Donn Wyllcocks', '1984-04-29', 'dwyllcocks9@acquirethisname.com');
+...
+
+--3- Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
+
+UPDATE employee
+SET name = 'patika dev',
+birthday = '2002-05-22',
+email = 'patika@dev.com'
+WHERE id < 6;
+
+--4- Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
+
+DELETE FROM employee
+WHERE id < 6;
+
+
+
